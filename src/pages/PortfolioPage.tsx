@@ -28,7 +28,7 @@ const PortfolioPage: React.FC = () => {
           { href: "#skills", label: "Skills" },
           { href: "#contact", label: "Contact" },
         ]}
-        onTryCLI={() => setShowCLI(true)}
+    
       />
       {/* CLI panel (docked / overlay) */}
       <CLIResume open={showCLI} onClose={() => setShowCLI(false)} />

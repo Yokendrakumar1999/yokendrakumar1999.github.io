@@ -15,12 +15,10 @@ type NavLink = { href: string; label: string };
 
 type HeaderProps = {
   links?: NavLink[];
-  onTryCLI?: () => void;
 };
 
 export const Header: React.FC<HeaderProps> = ({
   links = [],
-  onTryCLI,
 }) => {
   const { dark, toggle } = useTheme();
   const headerRef = useRef<HTMLElement | null>(null);
@@ -180,15 +178,7 @@ export const Header: React.FC<HeaderProps> = ({
             })}
           </div>
 
-          {/* CLI button */}
-          {onTryCLI && (
-            <button
-              onClick={onTryCLI}
-              className="hidden sm:block text-sm px-3 py-1 rounded-lg border border-[var(--border)] hover:bg-[var(--border)]/40 transition"
-            >
-              CLI
-            </button>
-          )}
+        
 
           {/* Theme toggle */}
           <button
